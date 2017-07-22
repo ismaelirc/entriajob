@@ -1,3 +1,11 @@
+/**
+	Module Contact
+	
+	name: String,
+	address: String,
+	dateCreated: Date
+
+*/
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -7,4 +15,4 @@ var contactSchema = new Schema({
 	dateCreated: {type: Date, default: Date.now}
 });
 
-module.exports = contactSchema;
+module.exports = mongoose.model('Contact',contactSchema);
